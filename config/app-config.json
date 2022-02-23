@@ -1,0 +1,5 @@
+{
+    "Introduction": "此配置可在打包后更改,刷新后生效",
+    "siteName": "网站名称",
+    "logo-position": "/logo.png"
+}
