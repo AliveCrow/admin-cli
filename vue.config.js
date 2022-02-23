@@ -50,7 +50,8 @@ module.exports = {
         algorithm: 'gzip',
         test: new RegExp('\\.(' + productionGzipExtensions.join('|') + ')$'),
         threshold: 10240,
-        minRatio: 0.8
+        minRatio: 0.8,
+        deleteOriginalAssets: true //是否删除原资源
       }),
       new webpack.optimize.LimitChunkCountPlugin({
         maxChunks: 5,
