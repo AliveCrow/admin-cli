@@ -29,6 +29,7 @@ specifiers:
   regenerator-runtime: ^0.13.9
   sass: ^1.26.5
   sass-loader: ^8.0.2
+  screenfull: 4.2.0
   script-ext-html-webpack-plugin: ^2.1.5
   svg-sprite-loader: ^6.0.11
   svgo: ^2.8.0
@@ -46,6 +47,7 @@ dependencies:
   normalize.css: 8.0.1
   nprogress: 0.2.0
   path-to-regexp: 6.2.0
+  screenfull: 4.2.0
   vue: 2.6.14
   vue-router: 3.5.3
   vuex: 3.6.2_vue@2.6.14
@@ -8705,6 +8707,11 @@ packages:
       ajv: 6.12.6
       ajv-keywords: 3.5.2_ajv@6.12.6
     dev: true
+
+  /screenfull/4.2.0:
+    resolution: {integrity: sha512-qpyI9XbwuMJElWRP5vTgxkFAl4k7HpyhIqBFOZEwX9QBXn0MAuRSpn7LOc6/4CeSwoz61oBu1VPV+2fbIWC+5Q==}
+    engines: {node: '>=0.10.0'}
+    dev: false
 
   /script-ext-html-webpack-plugin/2.1.5:
     resolution: {integrity: sha512-nMjd5dtsnoB8dS+pVM9ZL4mC9O1uVtTxrDS99OGZsZxFbkZE6pw0HCMued/cncDrKivIShO9vwoyOTvsGqQHEQ==}

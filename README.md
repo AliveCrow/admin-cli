@@ -1,8 +1,17 @@
+<!--
+ * @Description: 输入文件描述信息
+ * @Author: liu-wb
+ * @Date: 2022-02-23 15:26:01
+ * @LastEditTime: 2022-02-23 15:41:39
+-->
+
 #### 提交说明
 
 使用`git cz`代替`git commit`
 
 #### 目录说明
+
+**使用`npm run new`来新建 view/store/component**
 
 目录名按照上面的命名规范，其中 components 组件用大写驼峰，其余除 components 组件目录外的所有目录均使用 kebab-case 命名。
 
