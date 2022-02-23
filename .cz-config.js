@@ -1,3 +1,9 @@
+/*
+ * @Description: 输入文件描述信息
+ * @Author: liu-wb
+ * @Date: 2022-02-23 15:26:01
+ * @LastEditTime: 2022-02-23 16:08:41
+ */
 module.exports = {
     // 可选类型
     types: [
@@ -6,7 +12,7 @@ module.exports = {
         { value: 'fix', name: 'fix: 修复' },
         { value: 'docs', name: 'docs: 文档变更' },
         { value: 'style', name: 'style:代码格式(不影响代码运行的变动)' },
-        { value: 'refactor', name: 'refactor: 重构(既不是增加feature，也不是修复bug)'},
+        { value: 'refactor', name: 'refactor: 重构(既不是增加feature，也不是修复bug)' },
         { value: 'perf', name: 'perf: 性能优化' },
         { value: 'test', name: 'test: 增加测试' },
         { value: 'revert', name: 'revert: 回退' },
@@ -20,7 +26,7 @@ module.exports = {
         confirmCommit: '确认使用以上信息提交？(y/n/e/h)'
     },
     // 跳过问题
-    skipQuestions: ['body', 'footer'],
+    skipQuestions: ['body', 'scope', 'footer'],
     // subject文字长度默认是72
     subjectLimit: 72
 }
