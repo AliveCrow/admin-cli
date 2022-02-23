@@ -1,6 +1,6 @@
 #### 提交说明
 
-    使用`git cz`代替`git commit`
+使用`git cz`代替`git commit`
 
 #### 目录说明
 
