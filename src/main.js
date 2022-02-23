@@ -2,7 +2,7 @@
  * @Description: 输入文件描述信息
  * @Author: liu-wb
  * @Date: 2022-02-23 15:26:01
- * @LastEditTime: 2022-02-23 15:49:26
+ * @LastEditTime: 2022-02-23 16:00:20
  */
 
 import Vue from 'vue'
@@ -15,7 +15,7 @@ import router from './router'
 import store from './store'
 import '@/router/before'
 import Setting from '@/config/setting'
-import './icons' // icon
+import './icons' //     icon
 import mixins from '@/mixins'
 import ReadConfig from '@/utils/config';
 
