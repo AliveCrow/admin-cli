@@ -7,11 +7,7 @@
       @toggleClick="toggleSideBar"
     />
 
-    <scroll-pane
-      ref="scrollPane"
-      class="tags-view-wrapper"
-      @scroll="handleScroll"
-    >
+    <scroll-pane ref="scrollPane" class="tags-view-wrapper" @scroll="handleScroll">
       <router-link
         v-for="tag in visitedViews"
         ref="tag"
@@ -34,15 +30,9 @@
     <div class="refresh">
       <i class="el-icon-refresh" />
     </div>
-    <ul
-      v-show="visible"
-      :style="{ left: left + 'px', top: top + 'px' }"
-      class="contextmenu"
-    >
+    <ul v-show="visible" :style="{ left: left + 'px', top: top + 'px' }" class="contextmenu">
       <li @click="refreshSelectedTag(selectedTag)">Refresh</li>
-      <li v-if="!isAffix(selectedTag)" @click="closeSelectedTag(selectedTag)">
-        Close
-      </li>
+      <li v-if="!isAffix(selectedTag)" @click="closeSelectedTag(selectedTag)">Close</li>
       <li @click="closeOthersTags">Close Others</li>
       <li @click="closeAllTags(selectedTag)">Close All</li>
     </ul>
@@ -260,15 +250,15 @@ $hoverColor: #dfe6ec;
   }
   .refresh {
     background-color: #fff;
-    height: 33px;
+    height: 34px;
     width: 40px;
     position: absolute;
     right: 0;
-    top: 0;
+    top: -1px;
     .el-icon-refresh {
       position: absolute;
       right: 20px;
-      top: 50%;
+      top: 55%;
       transform: translateY(-50%);
     }
     &:hover {
