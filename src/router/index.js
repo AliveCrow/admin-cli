@@ -52,12 +52,19 @@ export const constantRoutes = [
     path: '/guide',
     component: Layout,
     redirect: '/guide/index',
+    meta: { title: '例子', icon: 'el-icon-eleme' },
     children: [
       {
         path: 'index',
         component: () => import('@/views/guide/index'),
         name: 'Guide',
         meta: { title: 'Guide', icon: 'el-icon-eleme', noCache: true }
+      },
+      {
+        path: '/table-demo',
+        component: () => import('@/views/table-demo/index'),
+        name: 'TableDemo',
+        meta: { title: 'table-demo', icon: 'el-icon-eleme', noCache: false }
       }
     ]
   },

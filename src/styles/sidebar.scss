@@ -6,7 +6,9 @@
     margin-left: $sideBarWidth;
     position: relative;
   }
-
+  .el-menu-item .is-active {
+    background-color: $menuHover!important;
+  }
   .sidebar-container {
     transition: width 0.28s;
     width: $sideBarWidth !important;
@@ -19,7 +21,11 @@
     left: 0;
     z-index: 1001;
     overflow: hidden;
-
+    .router-link-active {
+      .is-active, li {
+        background-color: #4089FF!important;
+      }
+    }
     // reset element-ui css
     .horizontal-collapse-transition {
       transition: 0s width ease-in-out, 0s padding-left ease-in-out, 0s padding-right ease-in-out;
@@ -66,6 +72,9 @@
       border: none;
       height: 100%;
       width: 100% !important;
+      li {
+        background-color: $menuBg;
+      }
     }
     // menu hover
     .submenu-title-noDropdown,
@@ -73,19 +82,24 @@
       &:hover {
         background-color: $menuHover !important;
         color: #fff!important;
+        i {
+          color: #fff!important;
+        }
       }
     }
 
     .is-active>.el-submenu__title {
-      color: $subMenuActiveText !important;
-      background-color: $subMenuBg !important;
+      color: $menuText !important;
+      background-color: $menuBg !important;
     }
-
     & .nest-menu .el-submenu>.el-submenu__title,
     & .el-submenu .el-menu-item {
+      & .is-active {
+        background-color: $subMenuHover !important;
+        color: #fff!important;
+      }
       min-width: $sideBarWidth !important;
       background-color: $subMenuBg;
-
       &:hover {
         background-color: $subMenuHover !important;
         color: #fff!important;
@@ -122,7 +136,6 @@
 
     .el-submenu {
       overflow: hidden;
-
       &>.el-submenu__title {
         padding: 0 !important;
         .svg-icon {
@@ -187,12 +200,6 @@
   }
 }
 
-
-.router-link-active {
-  .is-active {
-    background-color: #4089FF!important;
-  }
-}
 // when menu collapsed
 .el-menu--vertical {
   &>.el-menu {
@@ -212,6 +219,7 @@
       // you can use $subMenuHover
       background-color: $menuHover !important;
     }
+
   }
 
   // the scroll bar appears when the subMenu is too long

@@ -7,10 +7,14 @@ $subMenuActiveText:#666; //https://github.com/ElemeFE/element/issues/12951
 $menuBg:#D9E0E6;
 $menuHover:#4089FF;
 
-$subMenuBg:#D1D7DC;
+$subMenuBg: #D1D7DC;
 $subMenuHover:#4089FF;
 
 $sideBarWidth: 210px;
+
+$StatusBarColor: #fff; // 状态栏颜色
+
+
 
 /**
  * export只在sidebar组件中使用,在css里直接使用上面的变量

@@ -27,7 +27,7 @@
         />
       </router-link>
     </scroll-pane>
-    <div class="refresh">
+    <div class="refresh" @click="refresh">
       <i class="el-icon-refresh" />
     </div>
     <ul v-show="visible" :style="{ left: left + 'px', top: top + 'px' }" class="contextmenu">
@@ -86,6 +86,9 @@ export default {
     this.addTags()
   },
   methods: {
+    refresh() {
+      console.log('刷新页面')
+    },
     toggleSideBar() {
       this.$store.commit('app/TOGGLE_SIDEBAR')
     },
@@ -238,7 +241,7 @@ $hoverColor: #dfe6ec;
   display: flex;
   align-items: center;
   .hamburger-container {
-    line-height: 33px;
+    line-height: 34px;
     height: 100%;
     float: left;
     cursor: pointer;
@@ -270,9 +273,9 @@ $hoverColor: #dfe6ec;
   .tags-view-wrapper {
     .tags-view-item {
       color: #414141;
-      height: 33px !important;
+      height: 34px !important;
       margin: 0 !important;
-      line-height: 33px !important;
+      line-height: 34px !important;
       border: none !important;
       display: inline-block;
       position: relative;

@@ -27,7 +27,7 @@ export default {
   props: {
     collapse: {
       type: Boolean,
-      required: true
+      required: false
     }
   },
   data() {
@@ -55,27 +55,27 @@ export default {
 .sidebar-logo-container {
   position: relative;
   width: 100%;
-  height: 50px;
-  line-height: 50px;
-  background: #2b2f3a;
-  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  color: #333;
   overflow: hidden;
-
+  a {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+  }
   & .sidebar-logo-link {
     height: 100%;
     width: 100%;
 
     & .sidebar-logo {
-      width: 32px;
-      height: 32px;
-      vertical-align: middle;
-      margin-right: 12px;
+      height: 30px;
     }
 
     & .sidebar-title {
       display: inline-block;
       margin: 0;
-      color: #fff;
+      color: #333;
       font-weight: 600;
       line-height: 50px;
       font-size: 14px;

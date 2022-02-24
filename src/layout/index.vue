@@ -1,12 +1,13 @@
 <template>
   <div :class="classObj" class="app-wrapper">
-    <sidebar class="sidebar-container"/>
-    <div :class="{hasTagsView:appConfig.needTagsView}" class="main-container">
-      <div :class="{'fixed-header':appConfig.fixedHeader}">
+    <MainHeader></MainHeader>
+    <sidebar class="sidebar-container" :style="{top: isQiankun? '40px': '0'}"/>
+    <div :class="{hasTagsView:appConfig.needTagsView}" class="main-container" >
+      <div :class="{'fixed-header':appConfig.fixedHeader}" :style="{top:isQiankun?'40px':'0'}">
         <Navbar v-if="isQiankun"></Navbar>
         <TagsView v-if="appConfig.needTagsView"/>
+        <AppMain/>
       </div>
-      <AppMain/>
     </div>
   </div>
 </template>
@@ -17,6 +18,7 @@ import AppMain from '@/layout/AppMain'
 import Navbar from '@/layout/Navbar/index'
 import Sidebar from '@/layout/Sidebar'
 import TagsView from '@/layout/TagsView'
+import MainHeader from './MainHeader'
 
 export default {
   name: 'Layout',
@@ -24,7 +26,8 @@ export default {
     AppMain,
     Navbar,
     Sidebar,
-    TagsView
+    TagsView,
+    MainHeader
   },
   computed: {
     ...mapState({
@@ -53,7 +56,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .app-wrapper {
   @include clearfix;
   position: relative;

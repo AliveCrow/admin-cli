@@ -9,6 +9,7 @@
 <template>
   <section class="app-main">
     <transition name="fade-transform" mode="out-in">
+<!--      要想缓存,必须views有name,并且要和route.name一致-->
       <keep-alive :include="cachedViews">
         <router-view :key="key" />
       </keep-alive>
@@ -21,6 +22,7 @@ export default {
   name: 'AppMain',
   computed: {
     cachedViews() {
+      console.log(this.$store.state.tagsView.cachedViews)
       return this.$store.state.tagsView.cachedViews
     },
     key() {
@@ -33,10 +35,11 @@ export default {
 <style lang="scss" scoped>
 .app-main {
   /* 50= navbar  50  */
-  min-height: calc(100vh - 50px);
+  min-height: calc(100vh - 134px);
   width: 100%;
   position: relative;
   overflow: hidden;
+  padding: 20px
 }
 
 .fixed-header+.app-main {
@@ -46,7 +49,7 @@ export default {
 .hasTagsView {
   .app-main {
     /* 84 = navbar + tags-view = 50 + 34 */
-    min-height: calc(100vh - 84px);
+    min-height: calc(100vh - 34px);
   }
 
   .fixed-header+.app-main {

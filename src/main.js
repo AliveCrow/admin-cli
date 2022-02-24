@@ -8,7 +8,7 @@
 import Vue from 'vue'
 import 'normalize.css/normalize.css'
 import Element from 'element-ui'
-import '@/styles/element-ui.scss'
+import '@/styles/element-ui/index.scss'
 import '@/styles/index.scss'
 import App from './App.vue'
 import router from './router'
