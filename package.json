@@ -6,7 +6,8 @@
     "build": "vue-cli-service build",
     "lint": "eslint --ext .js,.vue src",
     "提交": "git-cz",
-    "新建文件": "plop"
+    "新建文件": "plop",
+    "prepare": "husky install"
   },
   "dependencies": {
     "axios": "^0.26.0",
@@ -60,5 +61,10 @@
       "eslint --fix",
       "git add"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
   }
 }
