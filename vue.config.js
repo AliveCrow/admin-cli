@@ -19,7 +19,7 @@ function createServerConfig(compilation) {
 }
 // https://cli.vuejs.org/config/
 module.exports = {
-  publicPath: '/',
+  publicPath: './',
   outputDir: 'dist',
   assetsDir: 'static',
   lintOnSave: process.env.NODE_ENV === 'development',
@@ -48,10 +48,10 @@ module.exports = {
       // 配置compression-webpack-plugin压缩
       new CompressionWebpackPlugin({
         algorithm: 'gzip',
-        test: new RegExp('\\.(' + productionGzipExtensions.join('|') + ')$'),
+        // test: new RegExp('\\.(' + productionGzipExtensions.join('|') + ')$'),
+        test: productionGzipExtensions,
         threshold: 10240,
         minRatio: 0.8,
-        deleteOriginalAssets: true //是否删除原资源
       }),
       new webpack.optimize.LimitChunkCountPlugin({
         maxChunks: 5,

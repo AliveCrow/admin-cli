@@ -1,26 +1,25 @@
-$--font-path: "~element-ui/lib/theme-chalk/fonts";
-@import "~element-ui/packages/theme-chalk/src/index";
-
 
 /* theme color */
-$--color-primary: #1890ff;
+$--color-primary: #4089FF;
 $--color-success: #52c41a;
 $--color-warning: #faad14;
 $--color-danger: #f5222d;
 
-$--border-radius-base: 2px !default; // 小圆角
-$--pagination-border-radius: 2px !default;
-$--tag-border-radius: 2px !default;
-$--card-border-radius: 2px !default;
-$--slider-border-radius: 2px !default;
-$--steps-border-radius: 2px !default;
-//.el-dropdown-menu {
-//  border-radius: 2px !important;
-//}
+$--border-radius-new: 1px; // 圆角
+$--border-radius-base: $--border-radius-new;
+$--pagination-border-radius: $--border-radius-new !default;
+$--tag-border-radius: $--border-radius-new !default;
+$--card-border-radius: $--border-radius-new !default;
+$--slider-border-radius: $--border-radius-new !default;
+$--steps-border-radius: $--border-radius-new !default;
 
-// $--color-text-regular: #1f2d3d;
 
 $--border-color-light: #dfe4ed;
 $--border-color-lighter: #e6ebf5;
 $--table-border: 1px solid #dfe6ec;
 
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
+//@import '../themes/theme1/index.css';

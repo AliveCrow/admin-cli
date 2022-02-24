@@ -32,7 +32,7 @@ export default {
   },
   data() {
     return {
-      title: '网站名字',
+      title: this.$config.siteName,
       /**
        * logo图片
        */

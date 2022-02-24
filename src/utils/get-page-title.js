@@ -5,5 +5,5 @@ export default function getPageTitle(pageTitle) {
   if (pageTitle) {
     return `${pageTitle} - ${Vue.config.siteName}`
   }
-  return `${title}`
+  return `${Vue.config.siteName}`
 }

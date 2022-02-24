@@ -7,7 +7,7 @@ export default {
   watch: {
     $route(route) {
       if (this.device === 'mobile' && this.sidebar.opened) {
-        store.commit('app/CLOSE_SIDEBAR',  false )
+        store.commit('app/CLOSE_SIDEBAR', false)
       }
     }
   },
