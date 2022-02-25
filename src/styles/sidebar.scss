@@ -88,7 +88,7 @@
       }
     }
 
-    .is-active>.el-submenu__title {
+    .is-active>ul>.el-submenu__title {
       color: $menuText !important;
       background-color: $menuBg !important;
     }

@@ -2,7 +2,8 @@
 export default {
   computed: {
     isQiankun() {
-      return !window.__POWERED_BY_QIANKUN__
+      console.log(!!window.__POWERED_BY_QIANKUN__)
+      return !!window.__POWERED_BY_QIANKUN__
     }
   }
 }

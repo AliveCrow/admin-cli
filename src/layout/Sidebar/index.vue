@@ -7,6 +7,7 @@
 -->
 <template>
   <div :class="{'has-logo':appConfig.showLogo}">
+    <Logo v-if="!isQiankun"></Logo>
     <el-scrollbar wrap-class="scrollbar-wrapper">
       <el-menu
           :default-active="activeMenu"
@@ -27,11 +28,13 @@
 import { mapGetters } from 'vuex'
 import SidebarItem from './SidebarItem'
 import variables from '@/styles/variables.scss'
+import Logo from './Logo'
 
 export default {
   name: 'Index',
   components: {
-    SidebarItem
+    SidebarItem,
+    Logo
   },
   computed: {
     ...mapGetters([

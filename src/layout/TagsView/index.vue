@@ -1,34 +1,34 @@
 <template>
   <div id="tags-view-container" class="tags-view-container">
     <hamburger
-      id="hamburger-container"
-      :is-active="sidebar.opened"
-      class="hamburger-container"
-      @toggleClick="toggleSideBar"
+        id="hamburger-container"
+        :is-active="sidebar.opened"
+        class="hamburger-container"
+        @toggleClick="toggleSideBar"
     />
 
     <scroll-pane ref="scrollPane" class="tags-view-wrapper" @scroll="handleScroll">
       <router-link
-        v-for="tag in visitedViews"
-        ref="tag"
-        :key="tag.path"
-        :class="isActive(tag) ? 'active' : ''"
-        :to="{ path: tag.path, query: tag.query, fullPath: tag.fullPath }"
-        tag="span"
-        class="tags-view-item"
-        @click.middle.native="!isAffix(tag) ? closeSelectedTag(tag) : ''"
-        @contextmenu.prevent.native="openMenu(tag, $event)"
+          v-for="tag in visitedViews"
+          ref="tag"
+          :key="tag.path"
+          :class="isActive(tag) ? 'active' : ''"
+          :to="{ path: tag.path, query: tag.query, fullPath: tag.fullPath }"
+          tag="span"
+          class="tags-view-item"
+          @click.middle.native="!isAffix(tag) ? closeSelectedTag(tag) : ''"
+          @contextmenu.prevent.native="openMenu(tag, $event)"
       >
         {{ tag.title }}
         <span
-          v-if="!isAffix(tag)"
-          class="el-icon-close"
-          @click.prevent.stop="closeSelectedTag(tag)"
+            v-if="!isAffix(tag)"
+            class="el-icon-close"
+            @click.prevent.stop="closeSelectedTag(tag)"
         />
       </router-link>
     </scroll-pane>
     <div class="refresh" @click="refresh">
-      <i class="el-icon-refresh" />
+      <i class="el-icon-refresh"/>
     </div>
     <ul v-show="visible" :style="{ left: left + 'px', top: top + 'px' }" class="contextmenu">
       <li @click="refreshSelectedTag(selectedTag)">Refresh</li>
@@ -213,8 +213,7 @@ export default {
       } else {
         this.left = left
       }
-
-      this.top = e.clientY - 50
+      this.top = e.clientY - 50 - this.isQiankun ? 20 : 0
       this.visible = true
       this.selectedTag = tag
     },
@@ -240,6 +239,7 @@ $hoverColor: #dfe6ec;
   position: relative;
   display: flex;
   align-items: center;
+
   .hamburger-container {
     line-height: 34px;
     height: 100%;
@@ -247,10 +247,12 @@ $hoverColor: #dfe6ec;
     cursor: pointer;
     transition: background 0.3s;
     -webkit-tap-highlight-color: transparent;
+
     &:hover {
       background: rgba(0, 0, 0, 0.025);
     }
   }
+
   .refresh {
     background-color: #fff;
     height: 34px;
@@ -258,18 +260,21 @@ $hoverColor: #dfe6ec;
     position: absolute;
     right: 0;
     top: -1px;
+
     .el-icon-refresh {
       position: absolute;
       right: 20px;
       top: 55%;
       transform: translateY(-50%);
     }
+
     &:hover {
       .el-icon-refresh {
         color: $activeColor;
       }
     }
   }
+
   .tags-view-wrapper {
     .tags-view-item {
       color: #414141;
@@ -283,9 +288,11 @@ $hoverColor: #dfe6ec;
       background: #fff;
       padding: 0 8px;
       font-size: 12px;
+
       &:hover {
         background-color: #dfe6ec;
       }
+
       &:after {
         content: "";
         height: 20px;
@@ -297,19 +304,24 @@ $hoverColor: #dfe6ec;
         top: 50%;
         transform: translateY(-50%);
       }
+
       &:first-of-type {
         margin-left: 15px;
       }
+
       &:last-of-type {
         margin-right: 15px;
       }
+
       &.active {
         background-color: #4089ff;
         color: #fff;
         border-color: #4089ff;
+
         &:after {
           background-color: #4089ff;
         }
+
         //&::before {
         //  content: '';
         //  background: #fff;
@@ -323,6 +335,7 @@ $hoverColor: #dfe6ec;
       }
     }
   }
+
   .contextmenu {
     margin: 0;
     background: #fff;
@@ -335,10 +348,12 @@ $hoverColor: #dfe6ec;
     font-weight: 400;
     color: #333;
     box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.3);
+
     li {
       margin: 0;
       padding: 7px 16px;
       cursor: pointer;
+
       &:hover {
         background: #4089ff;
         color: #fff;
@@ -361,11 +376,13 @@ $hoverColor: #dfe6ec;
       transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
       transform-origin: 100% 50%;
       transform: translateX(3px);
+
       &:before {
         transform: scale(1);
         display: inline-block;
         vertical-align: -3px;
       }
+
       &:hover {
         background-color: #fff;
         color: #666;

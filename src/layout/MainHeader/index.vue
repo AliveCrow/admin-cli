@@ -8,7 +8,7 @@
 -->
 <template>
   <div class="main-header">
-    <logo v-if="appConfig.showLogo && isQiankun" />
+    <logo v-if="appConfig.showLogo && !isQiankun" />
   </div>
 </template>
 

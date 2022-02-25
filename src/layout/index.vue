@@ -1,10 +1,10 @@
 <template>
   <div :class="classObj" class="app-wrapper">
-    <MainHeader></MainHeader>
+    <MainHeader  v-if="isQiankun"></MainHeader>
     <sidebar class="sidebar-container" :style="{top: isQiankun? '40px': '0'}"/>
     <div :class="{hasTagsView:appConfig.needTagsView}" class="main-container" >
       <div :class="{'fixed-header':appConfig.fixedHeader}" :style="{top:isQiankun?'40px':'0'}">
-        <Navbar v-if="isQiankun"></Navbar>
+        <Navbar v-if="!isQiankun"></Navbar>
         <TagsView v-if="appConfig.needTagsView"/>
         <AppMain/>
       </div>

@@ -1,0 +1,20 @@
+
+/**
+  * el-select
+ */
+.el-select-dropdown {
+  border: none;
+}
+.el-select-dropdown__wrap {
+  margin: 0!important;
+}
+.el-select-dropdown__wrap {
+  background: rgba(240, 242, 245, 0.39);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+  opacity: 1;
+  border-radius: $--border-radius-base;
+}
+.el-select-dropdown__item .hover {
+  background: #D0D9E0;
+  opacity: 1;
+}
