@@ -66,13 +66,11 @@
 
 <script>
 import DynamicTableContainer from '@/components/DynamicTableContainer'
-import DateTimePicker from '../../../../../src/components/DateTimePicker'
 
 export default {
   name: 'Index',
   components: {
-    DynamicTableContainer,
-    DateTimePicker
+    DynamicTableContainer
   },
   data() {
     return {
