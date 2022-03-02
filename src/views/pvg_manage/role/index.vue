@@ -1,6 +1,6 @@
 
 <template>
-  <div class="pvg_manage_role">
+  <div class="pvg_manage_role content-wrapper">
     角色管理
   </div>
 </template>

@@ -11,32 +11,48 @@ el-button
 }
 .el-button--search {
   background: linear-gradient(225deg, #236FEB 50%, #64A0FF 100%);
-  border-radius: #{$--border-radius-base - 1};
+  border-radius: $--border-radius-base;
   border: none;
   color: #fff!important;
   &:active {
-    background: linear-gradient(135deg, #236FEB 50%, #64A0FF 100%);
+    background: linear-gradient(210deg, #236FEB 50%, #64A0FF 100%);
   }
 }
 .el-button--reset {
   height: 24px!important;
   padding: 0 14px!important;
+  border-radius: $--border-radius-base
+}
+.el-button--config {
+  background: linear-gradient(225deg, #236FEB 0%, #64A0FF 100%);
+  height: 24px!important;
+  opacity: 1;
+  border-radius: $--border-radius-base;
+  color: #fff!important;
+  border: none;
+  &:active {
+    background: linear-gradient(200deg, #236FEB 0%, #64A0FF 100%);
+  }
 }
 .el-button--primary {
   background: #4089FF;
   //border-radius: #{$--border-radius-base - 1};
   border: 1px solid #4089FF;
+  border-radius: $--border-radius-base
 }
 .el-button--mini {
   height: 24px!important;
   padding: 0 14px!important;
+  border-radius: $--border-radius-base
 }
 .el-button--small {
   height: 28px!important;
   padding: 0 15px!important;
+  border-radius: $--border-radius-base
 }
 .el-button--medium {
   height: 32px!important;
   padding: 0 18px!important;
+  border-radius: $--border-radius-base
 }
 

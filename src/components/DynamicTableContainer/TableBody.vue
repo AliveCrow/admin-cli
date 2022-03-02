@@ -9,7 +9,7 @@
     <el-table
         ref="table"
         class="table"
-        :max-height="tableHeight()"
+        :height="tableHeight()"
         :row-style="rowStyle"
         highlight-current-row
         :data="tableData"

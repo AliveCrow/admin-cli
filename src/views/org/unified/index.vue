@@ -1,6 +1,6 @@
 
 <template>
-  <div class="org_unified">
+  <div class="org_unified content-wrapper">
     统一机构
   </div>
 </template>

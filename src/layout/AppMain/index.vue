@@ -30,7 +30,6 @@ export default {
   },
   computed: {
     cachedViews () {
-      console.log('需要缓存的页面:', this.$store.state.tagsView.cachedViews)
       return this.$store.state.tagsView.cachedViews
     },
     key () {

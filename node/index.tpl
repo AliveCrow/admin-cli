@@ -1,7 +1,7 @@
 
 {{#list}}
 <template>
-  <div class="{{this.pvgCode}}">
+  <div class="{{this.pvgCode}} content-wrapper">
     {{this.pvgName}}
   </div>
 </template>

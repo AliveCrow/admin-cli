@@ -1,6 +1,6 @@
 
 <template>
-  <div class="base_data_car">
+  <div class="base_data_car content-wrapper">
     统一车辆
   </div>
 </template>

@@ -4,6 +4,8 @@ import store from '@/store'
 import { getToken } from '@/utils/auth'
 import { removeToken } from './auth'
 
+let showMsg = true // 弹窗显示
+
 // create an axios instance
 const service = axios.create({
   baseURL: process.env.VUE_APP_PUBLIC_URL, // url = base url + request url
@@ -52,11 +54,17 @@ service.interceptors.response.use(
         location.reload()
       })
     } else {
-      Message({
-        message: res.message || 'Error',
-        type: 'error',
-        duration: 5 * 1000
-      })
+      if (showMsg) {
+        Message({
+          message: res.message || 'Error',
+          type: 'error',
+          duration: 3 * 1000
+        })
+        showMsg = false
+        setTimeout(() => {
+          showMsg = true
+        }, 3000)
+      }
     }
     return Promise.reject(new Error(res.message || 'Error'))
   },

@@ -1,6 +1,6 @@
 
 <template>
-  <div class="pvg_manage_pvg">
+  <div class="pvg_manage_pvg content-wrapper">
     功能权限
   </div>
 </template>

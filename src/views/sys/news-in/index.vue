@@ -1,6 +1,6 @@
 
 <template>
-  <div class="sys_news-in">
+  <div class="sys_news-in content-wrapper">
     传入消息
   </div>
 </template>

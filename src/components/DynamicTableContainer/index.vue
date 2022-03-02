@@ -43,7 +43,6 @@ import TableHeader from './TableHeader'
 import TableBody from './TableBody'
 import TableFooter from './TableFooter'
 import TableConfig from './TableConfig'
-// import { getAllField, getListFieldConfig, saveListFieldConfig } from '@/controllers/Others/sys/dynamic-list'
 
 import store from 'store'
 import { debounce } from '@/utils'
@@ -173,7 +172,7 @@ export default {
       },
       slotName: 'settings',
       dWidth: '',
-      tableDynamicHeight: window.innerHeight - 310
+      tableDynamicHeight: '100%'
     }
   },
   computed: {
@@ -276,7 +275,7 @@ export default {
     this.slotName = this.tableSlotName
     this.dWidth = this.dialogWidth
     window.addEventListener('resize', this.updateTableHeight)
-    this.tableDynamicHeight = this.tableHeight
+    // this.tableDynamicHeight = this.tableHeight
     this.getAllField()
     this.getListFieldConfig()
   },
@@ -285,7 +284,7 @@ export default {
   },
   methods: {
     updateTableHeight() {
-      this.tableDynamicHeight = window.innerHeight - 310
+      this.tableDynamicHeight = window.innerHeight - 300
     },
     setCurrentRow(index) {
       this.$refs.TableBody.setCurrentRow(index)
@@ -295,30 +294,31 @@ export default {
       this.$emit('update:dialogWidth', '600px')
     },
     async getAllField() {
-      // const res = await getAllField({ formId: this.formId })
-      const res = {
-        'formId': null,
-        'pvgId': 1,
-        'formConfig': '{"lineHeight":44,"pageSize":2,"pagination":1,"fontSize":14}',
-        'formName': '收款单',
-        'allField': '[{"dict":false,"prop":"facCode","label":"工厂云码","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"date","label":"单据日期","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"billno","label":"收款单单据号","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"agreeName","label":"合同名称","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"projFullname","label":"项目名称","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"customerName","label":"客户名称","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"agreeCcode","label":"合同云码","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"customerNccode","label":"客户nc编码","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"mny","label":"收款金额","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":true,"prop":"settletype","label":"结算类型","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"creator","label":"操作人","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"crtTime","label":"操作时间","width":"150","fommter":false,"orderby":"","sortable":false}]',
-        'defaultField': '[{"dict":false,"prop":"facCode","label":"工厂云码","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"date","label":"单据日期","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"billno","label":"收款单单据号","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"agreeName","label":"合同名称","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"projFullname","label":"项目名称","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"customerName","label":"客户名称","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"agreeCcode","label":"合同云码","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"customerNccode","label":"客户nc编码","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"mny","label":"收款金额","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":true,"prop":"settletype","label":"结算类型","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"creator","label":"操作人","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"crtTime","label":"操作时间","width":"150","fommter":false,"orderby":"","sortable":false}]',
-        'customConfig': '{"lineHeight":44,"pageSize":2,"pagination":1,"fontSize":14}'
-      }
+      const res = await this.$api.mock.getAllField({ formId: this.formId })
+      console.log(res)
+      // const res = {
+      //   'formId': null,
+      //   'pvgId': 1,
+      //   'formConfig': '{"lineHeight":44,"pageSize":2,"pagination":1,"fontSize":14}',
+      //   'formName': '收款单',
+      //   'allField': '[{"dict":false,"prop":"facCode","label":"工厂云码","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"date","label":"单据日期","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"billno","label":"收款单单据号","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"agreeName","label":"合同名称","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"projFullname","label":"项目名称","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"customerName","label":"客户名称","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"agreeCcode","label":"合同云码","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"customerNccode","label":"客户nc编码","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"mny","label":"收款金额","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":true,"prop":"settletype","label":"结算类型","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"creator","label":"操作人","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"crtTime","label":"操作时间","width":"150","fommter":false,"orderby":"","sortable":false}]',
+      //   'defaultField': '[{"dict":false,"prop":"facCode","label":"工厂云码","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"date","label":"单据日期","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"billno","label":"收款单单据号","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"agreeName","label":"合同名称","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"projFullname","label":"项目名称","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"customerName","label":"客户名称","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"agreeCcode","label":"合同云码","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"customerNccode","label":"客户nc编码","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"mny","label":"收款金额","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":true,"prop":"settletype","label":"结算类型","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"creator","label":"操作人","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"crtTime","label":"操作时间","width":"150","fommter":false,"orderby":"","sortable":false}]',
+      //   'customConfig': '{"lineHeight":44,"pageSize":2,"pagination":1,"fontSize":14}'
+      // }
       this.default.allField = JSON.parse(res.allField)
       this.default.defaultField = JSON.parse(res.defaultField)
       this.default.formConfig = JSON.parse(res.formConfig)
     },
     async getListFieldConfig() {
-      // const res = await getListFieldConfig({ formId: this.formId })
-      const res = {
-        'id': null,
-        'userEid': 398,
-        'customConfig': '{"lineHeight":44,"pageSize":2,"pagination":1,"fontSize":14}',
-        'formId': 202148,
-        'dispField': '[{"dict":false,"prop":"facCode","label":"工厂云码","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"date","label":"单据日期","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"billno","label":"收款单单据号","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"agreeName","label":"合同名称","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"projFullname","label":"项目名称","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"customerName","label":"客户名称","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"agreeCcode","label":"合同云码","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"customerNccode","label":"客户nc编码","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"mny","label":"收款金额","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":true,"prop":"settletype","label":"结算类型","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"creator","label":"操作人","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"crtTime","label":"操作时间","width":"150","fommter":false,"orderby":"","sortable":false}]',
-        'allField': null
-      }
+      const res = await this.$api.mock.getListFieldConfig({ formId: this.formId })
+      // const res = {
+      //   'id': null,
+      //   'userEid': 398,
+      //   'customConfig': '{"lineHeight":44,"pageSize":2,"pagination":1,"fontSize":14}',
+      //   'formId': 202148,
+      //   'dispField': '[{"dict":false,"prop":"facCode","label":"工厂云码","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"date","label":"单据日期","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"billno","label":"收款单单据号","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"agreeName","label":"合同名称","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"projFullname","label":"项目名称","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"customerName","label":"客户名称","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"agreeCcode","label":"合同云码","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"customerNccode","label":"客户nc编码","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"mny","label":"收款金额","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":true,"prop":"settletype","label":"结算类型","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"creator","label":"操作人","width":"150","fommter":false,"orderby":"","sortable":false},{"dict":false,"prop":"crtTime","label":"操作时间","width":"150","fommter":false,"orderby":"","sortable":false}]',
+      //   'allField': null
+      // }
       this.user.customConfig = JSON.parse(res.customConfig)
       if (!res.dispField) {
         this.user.dispField = JSON.parse(res.allField)
@@ -342,7 +342,7 @@ export default {
       this.$emit('confirm')
     },
     async saveField() {
-      const res = await saveListFieldConfig({
+      const res = await this.$api.mock.saveListFieldConfig({
         formId: this.formId,
         allField: JSON.stringify(this.$refs.TableConfig.$refs.TableTree.treeData),
         defaultField: JSON.stringify(this.default.defaultField),
@@ -364,6 +364,8 @@ export default {
         this.getAllField()
         this.getListFieldConfig()
         this.$emit('confirm')
+      }).catch(() => {
+        this.btnLoading = false
       })
     },
     confirm() {
@@ -512,6 +514,8 @@ $primary: #4089FF;
   background-color: #fff;
   border-radius: 4px;
   padding: 10px;
-  display: block;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 </style>

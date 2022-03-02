@@ -1,45 +1,5 @@
 <template>
   <div>
-    <DynamicTableContainer
-        operateWidth="200"
-        form-id="123123"
-        :table-data="[{},{},{},{},{},{},{},{},{},{},{},{}]"
-        :rowContext="true"
-        :total="10"
-    >
-      <template #contextList>
-        <ul class="context-list">
-          <li>详情</li>
-          <li>删除</li>
-        </ul>
-      </template>
-      <template #operate="scope">
-        <div class="fixed-operate">
-          <el-button
-              @click="handleRowClick(scope.row)"
-              type="text"
-              size="mini"
-          >详情
-          </el-button
-          >
-          <el-button type="text" size="mini">修改</el-button>
-          <el-button type="text" size="mini">添加</el-button>
-          <el-button type="text" size="mini">编辑</el-button>
-          <el-button type="text" size="mini">编辑</el-button>
-          <el-button
-              @click="handleRowClick(scope.row)"
-              type="text"
-              size="mini"
-          >详情
-          </el-button
-          >
-          <el-button type="text" size="mini">修改</el-button>
-          <el-button type="text" size="mini">添加</el-button>
-          <el-button type="text" size="mini">编辑</el-button>
-          <el-button type="text" size="mini">编辑</el-button>
-        </div>
-      </template>
-    </DynamicTableContainer>
     <div>
       <DatePicker
           v-model="value"
@@ -65,15 +25,9 @@
 </template>
 
 <script>
-import DynamicTableContainer from '@/components/DynamicTableContainer'
-import DateTimePicker from '../../../../../src/components/DateTimePicker'
 
 export default {
   name: 'Index',
-  components: {
-    DynamicTableContainer,
-    DateTimePicker
-  },
   data() {
     return {
       value: '',

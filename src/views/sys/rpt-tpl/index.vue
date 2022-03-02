@@ -1,6 +1,6 @@
 
 <template>
-  <div class="sys_rpt-tpl">
+  <div class="sys_rpt-tpl content-wrapper">
     报表模板
   </div>
 </template>

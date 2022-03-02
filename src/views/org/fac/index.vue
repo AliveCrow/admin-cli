@@ -1,6 +1,6 @@
 
 <template>
-  <div class="org_fac">
+  <div class="org_fac content-wrapper">
     统一工厂
   </div>
 </template>

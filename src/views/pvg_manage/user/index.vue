@@ -1,6 +1,6 @@
 
 <template>
-  <div class="pvg_manage_user">
+  <div class="pvg_manage_user content-wrapper">
     统一用户
   </div>
 </template>

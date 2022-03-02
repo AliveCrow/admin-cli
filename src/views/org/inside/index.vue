@@ -1,6 +1,6 @@
 
 <template>
-  <div class="org_inside">
+  <div class="org_inside content-wrapper">
     内部组织
   </div>
 </template>

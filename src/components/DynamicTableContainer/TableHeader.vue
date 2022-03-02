@@ -12,7 +12,7 @@
     </section>
     <section class="dynamic-table-header-right">
       <slot name="btn" />
-      <el-button type="new" icon="el-icon-setting" @click="_OPEN_" />
+      <el-button type="config" icon="el-icon-setting" @click="_OPEN_" />
     </section>
   </el-header>
 </template>

@@ -19,3 +19,14 @@
 p {
   color: $--color-text-primary
 }
+.card {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 10px 10px 0 10px;
+  border-radius: 3px
+}
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 122px);
+}

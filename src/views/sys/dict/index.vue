@@ -1,6 +1,6 @@
 
 <template>
-  <div class="sys_dict">
+  <div class="sys_dict content-wrapper">
     数据字典
   </div>
 </template>

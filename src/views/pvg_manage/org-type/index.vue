@@ -1,6 +1,6 @@
 
 <template>
-  <div class="pvg_manage_org-type">
+  <div class="pvg_manage_org-type content-wrapper">
     机构类型
   </div>
 </template>

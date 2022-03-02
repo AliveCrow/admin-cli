@@ -1,6 +1,6 @@
 
 <template>
-  <div class="sys_param">
+  <div class="sys_param content-wrapper">
     系统参数
   </div>
 </template>
