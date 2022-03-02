@@ -113,11 +113,11 @@ export default {
       default: false
     },
     /**
-* 表格高度(没有用)
+* 表格高度
 */
     tableHeight: {
       type: Number,
-      default: window.innerHeight - 310
+      default: window.innerHeight - 320
     },
     /**
 * 是否有序号列
@@ -172,7 +172,8 @@ export default {
       },
       slotName: 'settings',
       dWidth: '',
-      tableDynamicHeight: '100%'
+      tableDynamicHeight: '100%',
+      clientHeight: ''
     }
   },
   computed: {
@@ -249,6 +250,9 @@ export default {
     }
   },
   watch: {
+    clientHeight() {
+      this.updateTableHeight()
+    },
     dialogVisible(n, o) {
       if (n) {
         this.$nextTick(() => {
@@ -274,17 +278,25 @@ export default {
   created() {
     this.slotName = this.tableSlotName
     this.dWidth = this.dialogWidth
-    window.addEventListener('resize', this.updateTableHeight)
     // this.tableDynamicHeight = this.tableHeight
     this.getAllField()
     this.getListFieldConfig()
   },
+  mounted() {
+    this.clientHeight = `${document.documentElement.clientHeight}`// 获取浏览器可视区域高度
+    window.addEventListener('resize', this.updateClientHeight)
+  },
   destroyed() {
-    window.removeEventListener('resize', this.updateTableHeight)
+    window.removeEventListener('resize', this.updateClientHeight)
   },
   methods: {
+    updateClientHeight() {
+      this.clientHeight = `${document.documentElement.clientHeight}`
+      // this.tableDynamicHeight = window.innerHeight - 320
+    },
     updateTableHeight() {
       this.tableDynamicHeight = window.innerHeight - 300
+      console.log(this.tableDynamicHeight)
     },
     setCurrentRow(index) {
       this.$refs.TableBody.setCurrentRow(index)

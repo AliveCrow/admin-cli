@@ -1,5 +1,5 @@
 {
-    "Introduction": "此配置可在打包后更改,刷新后生效",
-    "siteName": "网站名称",
+    "Introduction": "此配置可在打包后更改,刷新后生效,开发模式下需要重启服务",
+    "siteName": "erp",
     "logo-position": "/logo.png"
 }

@@ -10,6 +10,7 @@
   <el-form-item v-bind="$attrs" class="my-form-item">
     <template >
       <component :is="el" ref="componentEl" v-model="modelValue" v-bind="$attrs" v-on="$listeners">
+<!--        @slot default slot-->
         <slot />
       </component>
     </template>
@@ -29,6 +30,9 @@ export default {
   },
   name: 'MyFormItem',
   props: {
+    /**
+     * element的组件名 eg: el-input
+     */
     el: {
       type: String,
       default: 'div'

@@ -280,12 +280,12 @@ $hoverColor: #dfe6ec;
     position: absolute;
     right: 0;
     top: -1px;
-
     .el-icon-refresh {
       position: absolute;
       right: 20px;
       top: 55%;
       transform: translateY(-50%);
+      font-size: 1.5rem;
     }
 
     &:hover {

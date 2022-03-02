@@ -11,8 +11,8 @@
         <MyFormItem v-model="searchForm.value2" label="value2" prop="value2" el="el-input"></MyFormItem>
         <MyFormItem v-model="searchForm.value2" label="value2" prop="value2" el="el-input"></MyFormItem>
         <MyFormItem v-model="searchForm.value2" label="value2" prop="value2" el="el-input"></MyFormItem>
-        <MyFormItem v-model="searchForm.value2" el="el-button" type="search">查询</MyFormItem>
-        <MyFormItem v-model="searchForm.value2" el="el-button" type="reset">重置</MyFormItem>
+        <MyFormItem el="el-button" type="search">查询</MyFormItem>
+        <MyFormItem el="el-button" type="reset">重置</MyFormItem>
       </el-form>
     </div>
     <DynamicTableContainer
