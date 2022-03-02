@@ -1,0 +1,42 @@
+/**
+el-button
+ */
+.el-button {
+  font-size: 1rem;
+  position: relative;
+  transition: all .25s;
+  &:active {
+    //top: 1px;
+  }
+}
+.el-button--search {
+  background: linear-gradient(225deg, #236FEB 50%, #64A0FF 100%);
+  border-radius: #{$--border-radius-base - 1};
+  border: none;
+  color: #fff!important;
+  &:active {
+    background: linear-gradient(135deg, #236FEB 50%, #64A0FF 100%);
+  }
+}
+.el-button--reset {
+  height: 24px!important;
+  padding: 0 14px!important;
+}
+.el-button--primary {
+  background: #4089FF;
+  //border-radius: #{$--border-radius-base - 1};
+  border: 1px solid #4089FF;
+}
+.el-button--mini {
+  height: 24px!important;
+  padding: 0 14px!important;
+}
+.el-button--small {
+  height: 28px!important;
+  padding: 0 15px!important;
+}
+.el-button--medium {
+  height: 32px!important;
+  padding: 0 18px!important;
+}
+

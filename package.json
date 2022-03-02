@@ -1,0 +1,77 @@
+{
+  "name": "admin-cli",
+  "version": "0.1.0",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "serve:mock": "vue-cli-service serve --mode mock",
+    "build": "vue-cli-service build",
+    "lint": "eslint --ext .js,.vue src",
+    "提交": "git-cz",
+    "新建文件": "plop",
+    "prepare": "husky install",
+    "根据权限表新建views": "node node/index.js"
+  },
+  "dependencies": {
+    "await-to-js": "^3.0.0",
+    "axios": "^0.26.0",
+    "core-js": "^3.6.5",
+    "dayjs": "^1.10.7",
+    "element-ui": "^2.15.6",
+    "js-cookie": "^3.0.1",
+    "normalize.css": "^8.0.1",
+    "nprogress": "^0.2.0",
+    "path-to-regexp": "^6.2.0",
+    "screenfull": "4.2.0",
+    "store": "^2.0.12",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@vue/cli-plugin-babel": "~4.5.13",
+    "@vue/cli-plugin-eslint": "~4.5.13",
+    "@vue/cli-plugin-router": "~4.5.13",
+    "@vue/cli-plugin-vuex": "~4.5.13",
+    "@vue/cli-service": "~4.5.13",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "commitizen": "^4.2.4",
+    "compression-webpack-plugin": "5.0.1",
+    "cz-customizable": "^6.3.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "generate-asset-webpack-plugin": "^0.3.0",
+    "handlebars": "^4.7.7",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
+    "prompt": "^1.2.2",
+    "regenerator-runtime": "^0.13.9",
+    "request": "^2.88.2",
+    "sass": "~1.32.6",
+    "sass-loader": "^8.0.2",
+    "script-ext-html-webpack-plugin": "^2.1.5",
+    "svg-sprite-loader": "^6.0.11",
+    "svgo": "^2.8.0",
+    "vue-template-compiler": "^2.6.11",
+    "yorkie": "^2.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,vue}": [
+      "eslint --fix"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  }
+}

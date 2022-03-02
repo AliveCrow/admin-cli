@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: #fff;
+        stroke: #fff;
+        stroke-width: 0.2px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.431" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#21d9e6"/>
+      <stop offset="1" stop-color="#0fdbaa"/>
+    </linearGradient>
+  </defs>
+  <g id="通讯监控" transform="translate(-545 -15)">
+    <g id="组_59" data-name="组 59" transform="translate(313)">
+      <circle id="椭圆_1" data-name="椭圆 1" class="cls-1" cx="10" cy="10" r="10" transform="translate(232 15)"/>
+    </g>
+    <g id="组_60" data-name="组 60" transform="translate(550.338 19.854)">
+      <path id="联合_4" data-name="联合 4" class="cls-2" d="M.442,10A.457.457,0,0,1,0,9.5V.5A.457.457,0,0,1,.442,0H9.556A.459.459,0,0,1,10,.5v9a.457.457,0,0,1-.442.5Zm-.1-.388h9.32L9.664,7.1H.343Zm0-2.868H9.655V.4H.343Zm6.644,2.1a.327.327,0,0,1-.284-.32A.3.3,0,0,1,6.987,8.2h1.7a.3.3,0,0,1,.284.319.327.327,0,0,1-.284.32Zm-5.68,0a.322.322,0,0,1,0-.64H5.283a.322.322,0,0,1,0,.64ZM5.313,6.09,3.578,2.179,2.7,4.165a.273.273,0,0,1-.256.193H1.307a.287.287,0,0,1-.284-.32.286.286,0,0,1,.284-.319h.966l1.05-2.371a.278.278,0,0,1,.511,0L5.568,5.257,6.732,2.629a.279.279,0,0,1,.511,0l.482,1.09h.965a.287.287,0,0,1,.284.321.287.287,0,0,1-.284.32H7.555A.33.33,0,0,1,7.3,4.167l-.313-.7L5.823,6.09a.272.272,0,0,1-.255.193A.328.328,0,0,1,5.313,6.09Z" transform="translate(-0.337 0.146)"/>
+    </g>
+  </g>
+</svg>

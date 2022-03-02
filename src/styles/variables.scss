@@ -1,0 +1,49 @@
+// sidebar
+$menuText:#666;
+$menuActiveText:#fff;
+$subMenuActiveText:#666; //https://github.com/ElemeFE/element/issues/12951
+$menuBg:#D9E0E6;
+$menuHover:#4089FF;
+$subMenuBg: #D1D7DC;
+$subMenuHover:#4089FF;
+$sideBarWidth: 210px;
+$StatusBarColor: #fff; // 状态栏颜色
+$MainHeader :#F0F2F5;
+/**
+ * export只在sidebar组件中使用,在css里直接使用上面的变量
+ */
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+}
+
+
+$primary-color: #D9E0E6;
+$primary-bgc-color: #fff;
+// table
+$table-header-bgc-color: #E8EAEE;
+$table-striped-bgc-color: #D0D9E0;
+/* theme color */
+$--color-primary: #4089FF;
+$--color-success: #52c41a;
+$--color-warning: #faad14;
+$--color-danger: #f5222d;
+
+$--color-text-primary: #333;
+$--border-radius-new: 2px; // 圆角
+$--border-radius-base: $--border-radius-new;
+$--pagination-border-radius: $--border-radius-new !default;
+$--tag-border-radius: $--border-radius-new !default;
+$--card-border-radius: $--border-radius-new !default;
+$--slider-border-radius: $--border-radius-new !default;
+$--steps-border-radius: $--border-radius-new !default;
+
+$--border-color-light: #dfe4ed;
+$--border-color-lighter: #e6ebf5;
+$--table-border: 1px solid #dfe6ec;

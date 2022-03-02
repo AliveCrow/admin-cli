@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.434" y1="1" x2="0.466" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fa7800"/>
+      <stop offset="1" stop-color="#ff9a78"/>
+    </linearGradient>
+  </defs>
+  <g id="销售" transform="translate(-819 -15)">
+    <circle id="椭圆_5" data-name="椭圆 5" class="cls-1" cx="10" cy="10" r="10" transform="translate(819 15)"/>
+    <path id="路径_56" data-name="路径 56" class="cls-2" d="M66.1,70.706l.89,4.672h6.791l1.251-4.671H66.109Zm1.214,6.371h6.333a.425.425,0,0,1,0,.849H67.31a.849.849,0,0,1-.834-.69l-1.567-8.226h-.484a.425.425,0,1,1,0-.849h.381a.974.974,0,0,1,.956.791l.179.942a.422.422,0,0,1,.168-.035H75.45a.426.426,0,0,1,.145.025.381.381,0,0,1,.09.013.425.425,0,0,1,.3.52l-1.475,5.5a.424.424,0,0,1-.249.283v.023l-.087,0a.423.423,0,0,1-.147,0l-6.881,0Zm5.805,1.7a.637.637,0,1,1-.637.637A.637.637,0,0,1,73.115,78.775Zm-5.52,0a.637.637,0,1,1-.637.637A.637.637,0,0,1,67.6,78.775Z" transform="translate(759 -49.16)"/>
+  </g>
+</svg>

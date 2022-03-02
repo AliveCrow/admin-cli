@@ -1,0 +1,16 @@
+{
+  "path": "./node_modules/cz-customizable",
+  "defaultType":"[新增功能]",
+  "types": {
+    "[Bug修复]": {
+
+      "description": "修复Bug,线上，测试，验收阶段的bug",
+      "title": "Bug Fixes"
+    },
+    "[文档修改]": {
+
+      "description": "文档增删改",
+      "title": "Documentation"
+    }
+  }
+}

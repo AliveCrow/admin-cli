@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        isolation: isolate;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.431" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#21d9e6"/>
+      <stop offset="1" stop-color="#0fdbaa"/>
+    </linearGradient>
+  </defs>
+  <g id="骨料" transform="translate(-1242 -15)">
+    <circle id="椭圆_8" data-name="椭圆 8" class="cls-1" cx="10" cy="10" r="10" transform="translate(1242 15)"/>
+    <g id="组_63" data-name="组 63" class="cls-2" transform="translate(1247 19)">
+      <path id="联合_8" data-name="联合 8" class="cls-3" d="M.555,11.746a.923.923,0,0,1-.289-.667V4.327a.292.292,0,0,1,.111-.251L3.9,1.058a1.508,1.508,0,0,1,2.011,0l3.52,3.017a.316.316,0,0,1,.1.266v6.737A.93.93,0,0,1,8.6,12H1.192A.924.924,0,0,1,.555,11.746Zm.36-.366H8.9V4.628H.915ZM4.309,1.561l-.593.5L5.651,3.99H8.366L5.505,1.561a.93.93,0,0,0-1.2,0ZM1.448,3.99H4.756L3.248,2.481Zm.07,5.556V8.917H8.3v.628ZM0,1.866A.621.621,0,0,1,1.048,1.4a.612.612,0,0,1,.189.438.619.619,0,0,1-.607.628H.618A.619.619,0,0,1,0,1.866ZM8.291.923a.618.618,0,1,1,.618.618A.618.618,0,0,1,8.291.923ZM1.867.944A.618.618,0,0,1,2.448,0a.609.609,0,0,1,.608.618.613.613,0,0,1-.608.613l-.056,0A.618.618,0,0,1,1.867.944Z" transform="translate(0 0)"/>
+    </g>
+  </g>
+</svg>

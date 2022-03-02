@@ -1,0 +1,21 @@
+@import './variables';
+@import "./sidebar";
+@import "./init";
+@import './mixin';
+
+
+
+
+
+#nprogress {
+  .bar {
+    z-index: 3001!important;
+    background: $--color-primary!important; //颜色可修改
+  }
+  .spinner {
+    z-index: 3001!important;
+  }
+}
+p {
+  color: $--color-text-primary
+}
